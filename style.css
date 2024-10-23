@@ -32,8 +32,8 @@ header {
 
 main {
 	display: flex;
+	gap: 32px;
 	justify-content: space-evenly;
-	/* align-items: center; */
 	width: 100%;
 }
 
@@ -66,14 +66,12 @@ main {
 
 .heading {
 	margin-top: 44px;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-family: 'Open Sans', sans-serif;
-	outline: solid 1px red;
 }
 
 .description {
 	margin: 24px 0;
-	font-size: 0.8em;
 }
 
 .description,
@@ -81,19 +79,23 @@ main {
 	color: #fff;
 }
 
-.socials img {
+.social-container {
+	display: flex;
+	justify-content: end;
+	align-self: self-end;
 }
 
-.icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	stroke-width: 0;
-	stroke: currentColor;
-	fill: currentColor;
+.social-container img {
+	background-color: #ffffff60;
+	padding: 6px;
+	border: 2px solid #fff;
+	border-radius: 10px;
 }
 
-/* Feel free to remove these styles or customise in your own stylesheet 👍 */
+.social-container img:hover {
+	background-color: #fff;
+}
+
 footer {
 	position: relative;
 	bottom: 0;
@@ -123,5 +125,9 @@ footer {
 		flex-wrap: wrap;
 		align-items: center;
 		text-align: center;
+	}
+
+	.socials-container div {
+		justify-content: center;
 	}
 }
