@@ -11,34 +11,37 @@
 
 body {
 	display: flex;
+	background-image: url(./images/bg-desktop.svg);
+	background-color: var(--violet);
 	flex-direction: column;
 	justify-content: space-between;
-	background-image: url(./images/bg-desktop.svg);
 	background-repeat: no-repeat;
-	background-color: var(--violet);
 	background-size: cover;
-	margin: 0 44px;
+	background-position: min-content;
+	margin: 0 24px;
 	height: 100vh;
 }
 
 header {
 	background-image: url(./images/logo.svg);
 	background-repeat: no-repeat;
-	background-position: 0%, 200%;
-	padding: 44px 0;
-	margin: 24px 0;
+	padding: 34px 0;
+	margin: 14px 0;
 	overflow: hidden;
 }
 
 main {
 	display: flex;
+	flex-shrink: none;
 	gap: 32px;
 	justify-content: space-evenly;
 	width: 100%;
 }
 
 .mockup {
+	display: block;
 	overflow: hidden;
+	max-height: fit-content;
 }
 
 .container-text {
@@ -48,9 +51,9 @@ main {
 .container-text button {
 	color: var(--violet);
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 24px;
 	border-color: transparent;
-	padding: 8px 48px;
+	padding: 12px 68px;
 	box-shadow: darkblue 0px 5px 20px -4px;
 }
 
@@ -65,7 +68,6 @@ main {
 }
 
 .heading {
-	margin-top: 44px;
 	font-size: 2rem;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -86,14 +88,17 @@ main {
 }
 
 .social-container img {
-	background-color: #ffffff60;
-	padding: 6px;
-	border: 2px solid #fff;
-	border-radius: 10px;
+	background-color: #ffffff20;
+	padding: 5px;
+	width: 24px;
+	overflow: hidden;
+	border: transparent 2px solid;
+	border-radius: 14px;
 }
 
 .social-container img:hover {
-	background-color: #fff;
+	background-color: var(--soft-magenta);
+	border: 2px solid #fff;
 }
 
 footer {
@@ -106,6 +111,10 @@ footer {
 	font-size: 11px;
 }
 .attribution a {
+	color: #fff;
+}
+
+.attribution a:hover {
 	color: var(--soft-magenta);
 }
 
@@ -115,9 +124,15 @@ footer {
 		margin: 0;
 	}
 
+	body {
+		padding: 0 24px;
+		background-image: url(./images/bg-mobile.svg);
+		background-size: contain;
+	}
+
 	header {
-		margin: 12px 0;
-		background-size: 50%;
+		margin-bottom: 10px;
+		background-size: 40%;
 	}
 
 	main {
@@ -127,7 +142,27 @@ footer {
 		text-align: center;
 	}
 
-	.socials-container div {
-		justify-content: center;
+	.heading {
+		font-size: 28px;
+	}
+
+	.description {
+		font-size: 16.5px;
+		font-weight: 300;
+		margin-bottom: 40px;
+	}
+
+	.mockup {
+		display: block;
+		overflow: hidden;
+		max-height: max-content;
+	}
+
+	.heading {
+		margin-bottom: 20px;
+	}
+
+	.social-container {
+		place-self: center;
 	}
 }
